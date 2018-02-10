@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>News Site</title>
+  <title>Stall'it</title>
   <link rel="stylesheet" href="css/">
-  <?php include 'sessionSetup.php'?>
+  <?php include 'session_setup.php'?>
 </head>
 <body>
-  <h1>Welcome to Stall'it</h1>
+  <h1>This is Stall'it</h1>
 
   <img id="bg_img" src="img/stall_doors.jpg" alt="stall_doors" />
 
@@ -19,8 +19,8 @@
 <!-- if not logged in -->
   <!-- login to account -->
   <div id="login_box">
-    <h2>Login</h2>
-    <form action="" >
+    <h2>login</h2>
+    <form action="login.php" >
       <input id="username" name="username" required="required" type="text" placeholder="username" />
       <input id="password" name="password" required="required" type="password" placeholder="" />
       <input type="submit" value="login" />
@@ -29,9 +29,9 @@
 
   <!-- or register for account -->
   <div id="register_box">
-    <h2>or Register</h2>
-    <form action="">
-      <input type="submit" value="sign me up" />
+    <h2>or register</h2>
+    <form action="register.php">
+      <input type="submit" value="register" />
     </form>
   </div>
 

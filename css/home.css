@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  text-align: left;
+  font-family: "Bookman";
+}

@@ -1,29 +1,17 @@
 # README #
+CSE330S MODULE 3: _Stall'it_
 
-This README would normally document whatever steps are necessary to get your application up and running.
+NOTE: This is an ongoing project. I believe there is an untapped social market of simultaneous public toilet users.
 
-### What is this repository for? ###
+## Start Here ##
+Alpha: https://baldpixels.github.io/stallit
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### Loging in ###
+try this dummy user...
+__username:__
+__password:__
 
-### How do I get set up? ###
+or create your own.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+# Code by #
+Connor Rudmann
