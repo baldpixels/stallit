@@ -8,10 +8,10 @@ Alpha: https://baldpixels.github.io/stallit
 
 ### Loging in ###
 try this dummy user...
-__username:__
-__password:__
+__username:__ flush<br />
+__password:__ flush<br />
 
-or create your own.
+or create your own.  
 
 # Code by #
 Connor Rudmann
