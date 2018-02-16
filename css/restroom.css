@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+#header {
+  z-index: +1;
+  height: 120px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+}
+
+#logo {
+  z-index: +1;
+  position: absolute;
+  top: 30px;
+  left: 6px;
+}
+
+#logo img {
+  z-index: -1;
+  position: absolute;
+  left: -48px;
+  top: -30px;
+  height: 120px;
+  opacity: 0.8;
+  clip: rect(0px, 280px, 240px, 0px);
+}
+
+#logo h1 {
+  z-index: +2;
+  font-weight: bold;
+  font-size: 48px;
+  text-shadow: 0 3px #666;
+}
+
+#logo a:hover {
+  font-style: italic;
+}
+
+#logo a:active {
+  font-style: italic;
+}
+
+/*** stall loader wrapper ***/
+#stalls {
+  z-index: -1;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/stall_BG.jpg");
+  background-repeat: repeat-x;
+  background-size: auto 100vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.stall {
+  height: 100vh;
+  width: 73vh;
+  position: relative;
+  display: inline-block;
+  white-space: normal;
+}
+
+.stall_title {
+  z-index: +1;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vh;
+  margin: 0;
+  padding: 6px;
+  font-size: 36px;
+  color: white;
+  text-shadow: 0 3px #666;
+  font-weight: lighter;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.stall_title a:hover {
+  font-style: italic;
+}
+
+.stall_title a:active {
+  font-style: italic;
+}
+
+.stall_stats {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  height: 48px;
+  width: 40vh;
+  padding: 6px;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.stall_stat {
+  position: relative;
+  margin: 0;
+  padding: 3px;
+  top: -9px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.stat {
+  font-weight: lighter;
+}
+
+.stall_creator {
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+.stall_creator a:hover {
+  font-style: italic;
+}
+
+.stall_creator a:active {
+  font-style: italic;
+}
+
+#young_stalin {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33%;
+  max-width: 150px;
+}
+
+#about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66%;
+  max-width: 360px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  font-family: helvetica;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+footer p {
+  position: relative;
+  bottom: 3px;
+}
+
+footer a:hover {
+  font-style: italic;
+}
+
+footer a:active {
+  font-style: italic;
+}

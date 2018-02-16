@@ -1,7 +1,11 @@
 <?php
-	// Content of database.php
 
-	$mysqli = new mysqli('localhost', 'stallman', 'stallman', 'stallit');
+	$server = 'localhost';
+	$username   = 'stallman';
+	$password   = 'stallman';
+	$database   = 'stallit';
+
+	$mysqli = new mysqli($server, $username, $password, $database);
 
 	if($mysqli->connect_errno) {
 		printf("Connection Failed: %s\n", $mysqli->connect_error);

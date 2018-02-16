@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: fixed;
+  font-family: helvetica;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  background-color: black;
+  /*background: radial-gradient(white 0%, black 50%);*/
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#wrapper {
+  z-index: +1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+#stall_name {
+  z-index: +4;
+  position: fixed;
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 12%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0 3px #666;
+  font-weight: lighter;
+  font-size: 10vh;
+  white-space: nowrap;
+  overflow: visible;
+  border-bottom: 3px solid white;
+}
+
+#stall_door {
+  position: fixed;
+  bottom: 12%;
+  height: 76%;
+  width: 100%;
+  background-image: url("../img/stall_door_bw.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#stalin_sticker {
+  z-index: +2;
+  position: fixed;
+  transform: rotate(16deg);
+  top: 33%;
+  left: 3%;
+  width: 12vw;
+  min-width: 72px;
+  height: auto;
+  opacity: .8;
+}
+
+#stalin_sticker:hover, #stalin_sticker:active {
+  opacity: 1;
+}
+
+#draw_controls {
+  z-index: +2;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#draw_controls input {
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 14px;
+}
+
+#draw_controls select {
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 12px;
+}
+
+#draw_controls input:active, #draw_controls select:active {
+  transform: translateY(1px);
+  outline: none;
+}
+
+#draw_controls input:focus, #draw_controls select:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
+}
+
+#centerpiece {
+  z-index: +1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-width: 0 3px 0 3px;
+  border-style: solid;
+  width: 100%;
+  height: 66vw;
+}
+
+/*** STALL FLOOR ***/
+#stall_floor_wrapper {
+  z-index: +3;
+  position: absolute;
+  left: 0;
+  top: 88%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 88%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-top: 3px solid white;
+}
+
+.stall_floor_header {
+  margin: 12px 0 12px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+#stall_settings {
+  margin-top: 12px;
+  padding: 0 0 12px 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 3px solid white;
+}
+
+#stall_settings form {
+
+}
+
+#stall_settings input {
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 18px;
+}
+
+#stall_settings input:active {
+  transform: translateY(1px);
+}
+
+#stall_settings input:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
+}
+
+.setting_tip {
+  font-size: 12px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+}
+
+#stories {
+  margin-top: 12px;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.story {
+
+}
+
+#comments {
+
+}
+
+.comment {
+
+}

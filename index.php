@@ -1,41 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Stall'it</title>
-  <link rel="stylesheet" href="css/">
-  <?php include 'session_setup.php'?>
-</head>
-<body>
-  <h1>This is Stall'it</h1>
+<?php include 'database.php' ?>
+<?php include 'session_setup.php' ?>
+<?php include 'header.php' ?>
 
-  <img id="bg_img" src="img/stall_doors.jpg" alt="stall_doors" />
-
-<!-- if logged in-->
-  <!-- view stories and comments -->
-  <!-- submit story commentary -->
-  <!-- comment on story -->
-  <!-- edit/delete user's stories -->
-
-<!-- if not logged in -->
-  <!-- login to account -->
-  <div id="login_box">
-    <h2>login</h2>
-    <form action="login.php" >
-      <input id="username" name="username" required="required" type="text" placeholder="username" />
-      <input id="password" name="password" required="required" type="password" placeholder="" />
-      <input type="submit" value="login" />
-    </form>
+  <div id="stalls">
+    <!-- stalls are added here -->
+    <?php include 'stalls_loader.php' ?>
   </div>
 
-  <!-- or register for account -->
-  <div id="register_box">
-    <h2>or register</h2>
-    <form action="register.php">
-      <input type="submit" value="register" />
-    </form>
-  </div>
+  <!-- log messages -->
+  <?php if(isset($_SESSION['log'])){} echo "<div id='user_log'>" . $_SESSION['log'] . "</div>"?>
 
+  <!-- use...
+  <input type="hidden" name="token" value="[php]echo $_SESSION['token'];" />
+  and
+  [php] if(!hash_equals($_SESSION['token'], $_POST['token'])){
+	 die("Request forgery detected");
+  }
+  -->
 
-
-</body>
-</html>
+<?php include 'footer.php' ?>

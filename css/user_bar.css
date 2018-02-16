@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#user_bar {
+  width: 100%;
+  min-width: 940px;
+  height: 120px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+#user_bar input {
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 18px;
+}
+
+#user_bar input:active {
+  transform: translateY(1px);
+  outline: none;
+}
+
+#user_bar input:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
+}
+
+#user_msg {
+  position: absolute;
+  top: 24px;
+  right: 6px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.user {
+
+}
+
+#logout_box {
+  position: absolute;
+  right: 6px;
+  top: 48px;
+}
+
+#user_color {
+
+}
+
+/***** USER CONTROLS *****/
+#user_controls {
+  position: absolute;
+  width: 600px;
+  height: 69px;
+  bottom: 0;
+  left: 224px;
+  white-space: nowrap;
+}
+
+#user_controls input {
+  position: absolute;
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 14px;
+}
+
+#user_controls select {
+  position: absolute;
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  font-size: 12px;
+}
+
+#user_controls input:active, #user_controls select:active {
+  transform: translateY(1px);
+  outline: none;
+}
+
+#user_controls input:focus, #user_controls select:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
+}
+
+/* form */
+#create_new {
+
+}
+
+#new_stall_name {
+  top: 30px;
+  left: 300px;
+}
+
+#new_stall_submit {
+  top: 0;
+  left: 300px;
+}
+
+/* form */
+#view_my_stalls {
+  top: 0;
+}
+
+#my_stalls_submit {
+  left: 420px;
+}
+
+/* form */
+#sort_by {
+  top: 0;
+}
+
+#sort_options {
+  top: 3px;
+  left: 0;
+}
+
+#sort_submit {
+  top: 30px;
+  left: 0;
+}
+
+/* form */
+#search {
+  top: 0px;
+}
+
+#search_text {
+  top: 0px;
+  left: 115px;
+}
+
+#search_submit {
+  top: 30px;
+  left: 115px;
+}
+
+#login_box {
+  position: absolute;
+  right: 6px;
+  top: 12px;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+#register_box {
+  position: absolute;
+  right: 6px;
+  top: 48px;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+#user_log {
+  position: fixed;
+  top: 132px;
+  right: 0px;
+  width: 224px;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: white;
+  background-color: rgba(0, 0, 0, .8);
+}
