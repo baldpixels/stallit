@@ -1,10 +1,10 @@
 # README #
 CSE330S MODULE 3: _Stall'it_
 
-NOTE: This is an ongoing and perpetually unfinished project. I believe there is an untapped social market of simultaneous public toilet users.
+__NOTE:__ This is an ongoing and perpetually unfinished project. I believe there is an untapped social market of simultaneous public toilet users.
 
 ## Start Here ##
-Live Alpha: https://baldpixels.github.io/stallit
+Live Alpha: [https://baldpixels.github.io/stallit](http://ec2-18-218-230-146.us-east-2.compute.amazonaws.com/~connor330/stallit/index.php)
 
 __NOTE:__ If you ever feel stuck, look for a picture of Stalin.
 
