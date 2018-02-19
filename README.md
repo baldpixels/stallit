@@ -26,7 +26,7 @@ __PT 3)__
 Stalls earn "activity_points" based on how many stories have been posted within them. Stories also earn activity points for each comment written in reply to them.
 
 __PT's 4, 5, & 6)__
-There are a number of unfinished elements that you might come across while using stall'it. For instance, the "view your stalls" and "search all stalls" buttons are just dummy inputs at this point (i.e. they don't do anything). However, the "sort stalls by..." input should be working!
+There are a number of unfinished elements that you might come across while using stall'it. For instance, the "view my stalls" and "search all stalls" buttons are just dummy inputs at this point (i.e. they don't do anything). However, the "sort by..." input should be working!
 
 # Code by #
 Connor Rudmann a.k.a. "Vlad Pixels"
