@@ -1,5 +1,6 @@
 <?php
 //register.php
+
   include 'database.php';
   include 'session_setup.php';
 
@@ -9,15 +10,10 @@
   //username check
   if(isset($_POST['username']))
   {
-    //a username was entered
-    if(!ctype_alnum($_POST['username']))
+  //a username was entered
+    if(!preg_match("/^[a-zA-Z0-9_\-]+$/", $_POST['username']))
     {
       $_SESSION['log'] = "<h4>sorry, username can only contain letters and digits.</h4>";
-      header("Location: index.php");
-    }
-    if(strlen($_POST['username']) > 50)
-    {
-      $_SESSION['log'] = "<h4>sorry, username cannot be longer than 50 characters.</h4>";
       header("Location: index.php");
     }
   }
@@ -68,7 +64,7 @@
       header("Location: index.php");
     }
 
-    $stmt->bind_param('ssiiid', mysql_real_escape_string($_POST['username']), password_hash($_POST['password'], PASSWORD_DEFAULT), $assignedRed, $assignedGreen, $assignedBlue, $assignedAlpha);
+    $stmt->bind_param('ssiiid', $_POST['username'], password_hash($_POST['password'], PASSWORD_DEFAULT), $assignedRed, $assignedGreen, $assignedBlue, $assignedAlpha);
 
     if($stmt->execute()){
       $_SESSION['log'] = "<h4>nice, you are all set.</h4>

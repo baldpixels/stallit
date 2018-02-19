@@ -1,17 +1,32 @@
 # README #
 CSE330S MODULE 3: _Stall'it_
 
-NOTE: This is an ongoing project. I believe there is an untapped social market of simultaneous public toilet users.
+NOTE: This is an ongoing and perpetually unfinished project. I believe there is an untapped social market of simultaneous public toilet users.
 
 ## Start Here ##
-Alpha: https://baldpixels.github.io/stallit
+Live Alpha: https://baldpixels.github.io/stallit
 
-### Loging in ###
-try this dummy user... <br />
-__username:__ flush <br />
-__password:__ flush <br />
+__NOTE:__ If you ever feel stuck, look for a picture of Stalin.
 
-or create your own.  
+### Logging in ###
+try this dummy user...  
+__username:__ sponge  
+__password:__ sponge  
+
+or make your own user!
+
+### Features ###
+__PT 1)__
+All new users, upon registration, are randomly assigned an RGBA color. This is their user_color, and it will mark any stories or comments they write.
+
+__PT 2)__
+Beyond stories and comments, users can also create *stalls*, which are essentially groupings of stories and comments. Stalls can be either __public__ (anyone can post a story) or __private__ (only the user who created the stall can post stories).
+
+__PT 3)__
+Stalls earn "activity_points" based on how many stories have been posted within them. Stories also earn activity points for each comment written in reply to them.
+
+__PT's 4, 5, & 6)__
+There are a number of unfinished elements that you might come across while using stall'it. For instance, the "view your stalls" and "search all stalls" buttons are just dummy inputs at this point (i.e. they don't do anything). However, the "sort stalls by..." input should be working!
 
 # Code by #
-Connor Rudmann
+Connor Rudmann a.k.a. "Vlad Pixels"

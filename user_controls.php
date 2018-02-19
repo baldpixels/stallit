@@ -1,5 +1,6 @@
 <?php
 //user_controls.php
+
   echo '<div id="user_controls">';
 
   //sort posts by...
@@ -21,7 +22,7 @@
 
   //create new stall
   echo '<form id="create_new" method="post" action="create_stall.php">
-      <input id="new_stall_name" name="new_stall_name" type="text" required="required" placeholder="name your stall" />
+      <input id="new_stall_name" name="new_stall_name" type="text" maxlength="24" size="24" required="required" placeholder="name your stall" />
       <input id="new_stall_submit" name="new_stall_submit" type="submit" value="create new stall" style="background-color: rgba(' . $_SESSION['user_rgba'] . ');" />
     </form>';
 

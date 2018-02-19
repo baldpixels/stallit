@@ -1,4 +1,5 @@
 <?php
+//databse.php
 
 	$server = 'localhost';
 	$username   = 'stallman';

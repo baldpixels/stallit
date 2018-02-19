@@ -1,5 +1,6 @@
 <?php
 //login.php
+
   include 'database.php';
   include 'session_setup.php';
 
@@ -22,10 +23,11 @@
   if(!$stmt){
     $_SESSION['log'] = "<h4>query error...</h4>
             <p>maybe try again later.</p>";
+    $stmt->close();
     header("Location: index.php");
   }
   else {
-    $stmt->bind_param('s', mysql_real_escape_string($_POST['username']));
+    $stmt->bind_param('s', $_POST['username']);
 
     if($stmt->execute()){
       $stmt->store_result();
@@ -43,15 +45,15 @@
 
         $stmt->fetch();
         //password verified --> login successful!
-        if(password_verify(mysql_real_escape_string($_POST['password']), $returned_password)) {
+        if(password_verify($_POST['password'], $returned_password)) {
           //store user's rgba
           $returned_rgba = "" . $returned_red . "," . $returned_green . "," . $returned_blue . "," . $returned_alpha . "";
 
           beginUserSession($returned_username, $returned_id, $returned_rgba);
 
-          $_SESSION['log'] = "<h4>you're logged in!</h4><p>" .
-                  $returned_username . "<br />"
-                  . "your color is <span style='color: rgba(" . $returned_rgba . ");' id='user_color'>" . $returned_rgba . "</span>
+          $_SESSION['log'] = "<h4>you're logged in, <span class='user'> " . $returned_username . "</span>!</h4>
+                  <p>
+                    your color is <span class='user'>" . $returned_rgba . "</span>
                   </p>";
           //free result
           $stmt->free_result();

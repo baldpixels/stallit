@@ -12,18 +12,7 @@
     $stall_name = $stall_array[3];
     $stall_points = $stall_array[4];
 
-    //database connect
-    $server = 'localhost';
-  	$username   = 'stallman';
-  	$password   = 'stallman';
-  	$database   = 'stallit';
-
-  	$mysqli = new mysqli($server, $username, $password, $database);
-
-  	if($mysqli->connect_errno) {
-  		printf("Connection Failed: %s\n", $mysqli->connect_error);
-  		exit;
-  	}
+    include 'database.php';
 
     //grab username and user rgba
     $stmt = $mysqli->prepare("SELECT username, red, green, blue, alpha
@@ -52,8 +41,8 @@
 
     //echo stall div
     echo '<div class="stall">
-        <h4 class="stall_title" style="background-color: rgba(' . $returned_rgba . ');"><a href="stall_viewer.php?id=' . $stall_id . '">' . $stall_name . '</a></h4>
-        <div class="stall_stats" style="background-color: rgba(' . $returned_rgba . ');">
+        <h4 class="stall_title" style="border-color: rgba(' . $returned_rgba . '); background-color: rgba(' . $returned_rgba . ');"><a href="stall_viewer.php?id=' . $stall_id . '">' . $stall_name . '</a></h4>
+        <div class="stall_stats" style="border-color: rgba(' . $returned_rgba . '); background-color: rgba(' . $returned_rgba . ');">
           <p class="stall_stat">
             points:<span class="stat"> ' . $stall_points . '</span>
           </p>

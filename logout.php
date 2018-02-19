@@ -1,4 +1,6 @@
 <?php
+//logout.php
+
 session_start();
 
   //logout

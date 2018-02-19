@@ -1,5 +1,6 @@
 <?php
-//register.php
+//my_stalls.php
+
   include 'database.php';
   include 'session_setup.php';
 

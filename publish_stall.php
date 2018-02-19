@@ -1,5 +1,6 @@
 <?php
-//register.php
+//publish_stall.php
+
   include 'database.php';
   include 'session_setup.php';
 
@@ -11,8 +12,8 @@
 
     //submit form to stalls database
     $stmt = $mysqli->prepare("INSERT INTO
-                stalls(created_by, name, description)
-            VALUES(?, ?, ?)");
+                stalls(created_by, name, description, access)
+            VALUES(?, ?, ?, ?)");
     if(!$stmt) {
       $_SESSION['log'] = "<h4>query error...</h4>
               <p>maybe try again later.</p>";
@@ -20,7 +21,7 @@
       header("Location: index.php");
     }
 
-    $stmt->bind_param('iss', $_SESSION['user_id'], $_POST['stall_name'], $_POST['stall_description']);
+    $stmt->bind_param('isss', $_SESSION['user_id'], $_POST['stall_name'], $_POST['stall_description'], $_POST['stall_access']);
 
     if($stmt->execute()) {
       $_SESSION['log'] = "<h4>nice, your stall is live.</h4>
@@ -30,7 +31,7 @@
     }
     else {
       $_SESSION['log'] = "<h4>sorry, something went wrong...</h4>
-              <p>maybe try again later, " . $_SESSION['user_id'] . $_POST['stall_name'] . "</p>";
+              <p>maybe try again later</p>";
       $stmt->close();
       header("Location: index.php");
     }

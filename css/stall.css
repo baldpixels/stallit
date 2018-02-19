@@ -15,12 +15,10 @@ body{
   padding: 0;
   overflow: scroll;
   background-color: black;
-  /*background: radial-gradient(white 0%, black 50%);*/
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 #wrapper {
@@ -51,6 +49,24 @@ a {
   white-space: nowrap;
   overflow: visible;
   border-bottom: 3px solid white;
+  box-sizing: border-box;
+}
+
+#stalin_sticker {
+  z-index: +5;
+  position: fixed;
+  transform: rotate(16deg);
+  top: 9%;
+  left: 3%;
+  width: 18vw;
+  min-width: 96px;
+  max-width: 180px;
+  height: auto;
+}
+
+#stalin_sticker:hover, #stalin_sticker:active {
+  -webkit-filter: brightness(66%); /* Safari 6.0 - 9.0 */
+  filter: brightness(66%);
 }
 
 #stall_door {
@@ -63,22 +79,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
-}
-
-#stalin_sticker {
-  z-index: +2;
-  position: fixed;
-  transform: rotate(16deg);
-  top: 33%;
-  left: 3%;
-  width: 12vw;
-  min-width: 72px;
-  height: auto;
-  opacity: .8;
-}
-
-#stalin_sticker:hover, #stalin_sticker:active {
-  opacity: 1;
 }
 
 #draw_controls {
@@ -131,38 +131,27 @@ a {
   height: 66vw;
 }
 
-/*** STALL FLOOR ***/
-#stall_floor_wrapper {
+/***** tp_wrapper div *****/
+
+#tp_wrapper {
   z-index: +3;
   position: absolute;
   left: 0;
-  top: 88%;
+  top: 12%;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 88%;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   border-top: 3px solid white;
+  box-sizing: border-box;
 }
 
-.stall_floor_header {
-  margin: 12px 0 12px 0;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 36px;
-  color: white;
-  font-weight: lighter;
-  text-decoration: underline;
-}
-
+/*** create_stall settings ***/
 #stall_settings {
-  margin-top: 12px;
-  padding: 0 0 12px 0;
+  padding: 12px 0 12px 0;
   width: 100%;
   text-align: center;
-  border-bottom: 3px solid white;
 }
 
 #stall_settings form {
@@ -174,8 +163,9 @@ a {
   border: none;
   border-radius: 5px;
   padding: 3px;
-  margin: 3px;
-  font-size: 18px;
+  margin: 6px 0 6px 0;
+  font-size: 12px;
+  background: none;
 }
 
 #stall_settings input:active {
@@ -188,28 +178,266 @@ a {
   background-color: #aaa;
 }
 
+#description_input {
+  width: 90%;
+}
+
 .setting_tip {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: lighter;
   margin: 0;
   padding: 0;
 }
 
-#stories {
-  margin-top: 12px;
-  padding: 0;
-  width: 100%;
+/*** tp_roll and scroll elements ***/
+
+/* tp_roll img */
+#tp_roll {
+  position: absolute;
+  left: 50%;
+  top: 6%;
+  transform: translate(-36%, 0);
+  height: 100%;
+}
+
+#tp_header {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-54%, 0);
+  width: 39vh;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 6vh;
+  color: white;
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+/*** scrollable div ***/
+#description {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: white;
+}
+
+#description p {
+  color: black;
+  margin: 0;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+#tp_scroller {
+  z-index: +3;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-54%, 0);
+  height: 46%;
+  width: 39vh;
+  border-width: 12px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3vh 3vh 0 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.tp_msg {
+  font-weight: lighter;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.tp_msg p {
+  padding: 0;
+  margin: 0;
+}
+
+#stories {
+  margin-top: 6px;
+  padding: 0 0 3vh 0;
+  width: 100%;
+  text-align: left;
+}
+
+#stories form h3 {
+  margin: 12px 0 3px 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#stories form input {
+  width: 33%;
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 6px 0 6px 0;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+#stories form input:active, #stories form textarea:active {
+  transform: translateY(1px);
+}
+
+#stories form textarea {
+  box-shadow: 0 2px #666;
+  border: 2px solid #666;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+  background-color: transparent;
+}
+
+#new_story_textarea {
+  width: 90%;
+  height: 120px;
+  font-size: 12px;
+}
+
+#stories form input:focus, #stories form textarea:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
 }
 
 .story {
-
+  border-bottom: 1px solid #666;
+  padding: 6px;
 }
 
-#comments {
+.story_title {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 6px 0 0 0;
+}
 
+.story_points {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 3px 0 3px 0;
+  padding: 0;
+}
+
+.points {
+  font-weight: lighter;
+}
+
+.story_poster {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 3px 0 3px 0;
+  padding: 0;
+}
+
+.poster {
+  font-weight: lighter;
+}
+
+.poster a:hover, .poster a:active {
+  font-style: italic;
+}
+
+.link {
+  font-size: 12px;
+}
+
+.link a {
+  color: #666;
+}
+
+.link a:hover, .link a:active {
+  font-style: italic;
+}
+
+.story_content {
+  font-size: 15px;
+}
+
+.comments {
+  margin-top: 6px;
+  width: 100%;
+  text-align: right;
+}
+
+.comments_toggle {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 33%;
+}
+
+.comments_header {
+  font-size: 15px;
+  margin: 6px 0 3px 0;
+  padding: 0;
+  font-weight: bold;
+  text-transform: underline;
 }
 
 .comment {
+  width: 66%;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #666;
+  padding: 3px;
+  margin: 3px 0 6px 0;
+  float: right;
+  text-align: left;
+}
 
+.comment_content {
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.comment_writer {
+  font-size: 9px;
+}
+
+.writer a:hover {
+  font-style: italic;
+}
+
+.comments form input {
+  width: 33%;
+  box-shadow: 0 2px #666;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 6px 0 6px 0;
+  font-size: 10px;
+  background-color: transparent;
+}
+
+.comments form input:active, .comments form textarea:active {
+  transform: translateY(1px);
+}
+
+.comments form textarea {
+
+}
+
+.new_comment_textarea {
+  width: 66%;
+  height: 48px;
+  font-size: 10px;
+}
+
+.comments form input:focus, .comments form textarea:focus {
+  transform: translateY(1px);
+  outline: none;
+  background-color: #aaa;
 }

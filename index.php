@@ -10,7 +10,7 @@
   <!-- log messages -->
   <?php if(isset($_SESSION['log'])){} echo "<div id='user_log'>" . $_SESSION['log'] . "</div>"?>
 
-  <!-- use...
+  <!-- SESSION TOKEN
   <input type="hidden" name="token" value="[php]echo $_SESSION['token'];" />
   and
   [php] if(!hash_equals($_SESSION['token'], $_POST['token'])){

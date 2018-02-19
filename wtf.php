@@ -5,6 +5,8 @@
 <html>
   <head>
     <title>wtf is stall'it?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Vlad Pixels">
     <link rel="stylesheet" href="css/restroom.css">
   </head>
 

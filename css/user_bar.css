@@ -40,17 +40,13 @@
 }
 
 .user {
-
+  font-weight: lighter;
 }
 
 #logout_box {
   position: absolute;
   right: 6px;
   top: 48px;
-}
-
-#user_color {
-
 }
 
 /***** USER CONTROLS *****/
